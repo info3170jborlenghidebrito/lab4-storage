@@ -1,0 +1,9 @@
+img {
+  max-width: 150px;
+  display: inline;
+}
+
+.mat-card-header {
+  max-width: 300px;
+  display: inline;
+}
