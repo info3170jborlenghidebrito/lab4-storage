@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, OnDestroy {
         .reduce((p, n) => p + n, 0);
     });
 
-    // new subscription - Part 2 - Exercise 1:
+    // new subscription - Part 2.1 - Create another subscription in the app.component.ts controller that gets the sum of products without considering their quantity. This will count only how many different products are in the shopping cart:
     this._sumSubscription = this.cart.subscribe((cart) => {
       // array to store the productIds
       let productIds = [];

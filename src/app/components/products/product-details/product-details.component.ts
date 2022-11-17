@@ -13,6 +13,7 @@ import { ShoppingCartService } from '../../services/shopping-cart.service';
 export class ProductDetailsComponent implements OnInit {
   products: Product[];
   product: Product;
+  secondParameter: number;
 
   constructor(
     private _productsService: ProductsService,
@@ -28,9 +29,11 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
     console.log(this.route.title);
+    // Part 1.1 - Research how to have a second argument to the product details route
     const productIdFromRoute = Number(routeParams.get('productId'));
-    // retriving second parameter
+    // Part 1.4 - In the product details, retrieve the argument value
     const rate = Number(routeParams.get('rate'));
+    this.secondParameter = rate;
 
     this.products = this._productsService.getProducts();
     this.product = this.products.find(

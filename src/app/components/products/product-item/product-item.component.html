@@ -5,6 +5,7 @@
     src="{{ product.pictureUrl }}"
   />
   <mat-card-content class="product-description">
+    <!-- part 1.3 - In the link to the product details, in the product item in the list, including this second argument in the route -->
     <a
       [title]="product.name + ' details'"
       [routerLink]="['/products', product.id, product.rate]"

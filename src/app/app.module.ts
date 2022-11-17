@@ -26,6 +26,7 @@ import { ProductDetailsComponent } from './components/products/product-details/p
     RouterModule.forRoot([
       { path: 'products', component: ProductsListComponent },
       { path: 'products-list', redirectTo: '/products', pathMatch: 'full' },
+      // Part 1.2 - Define this second argument in the route on app.module.ts
       { path: 'products/:productId/:rate', component: ProductDetailsComponent },
       { path: 'cart', component: ShoppingCartComponent },
       { path: 'about-us', component: AboutUsComponent },
